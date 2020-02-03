@@ -1,3 +1,19 @@
 body {
-    background-color: #7FDBFF;
+  background-color: #7FDBFF;
+  font-size: 62%;
+}
+
+.board {
+  font-size: 1.6rem;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  padding: .5rem;
+  width: 30%;
+  height: 15rem;
+  margin: 1rem;
 }

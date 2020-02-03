@@ -1,14 +1,16 @@
-import { pingPong } from './ping-pong';
+/* eslint-disable no-console */
+import { Cards } from './cards';
 import './styles.css';
 
+let cards = new Cards();
 $(document).ready(function () {
-  $('#ping-pong-form').submit(function (event) {
-    event.preventDefault();
-    var goal = $('#goal').val();
-    var output = pingPong(goal);
-    output.forEach(function (element) {
-      $('#solution').append("<li>" + element + "</li>");
-    });
+  var print = [];
+  console.log(cards.deck);
+  cards.deck.forEach(element => {
+    print.push(
+      '<div class="card"> <img src="'+element.img+'"> '+element.name+' </div>'
+    );
   });
+  $('.board').html(print.join(""));
 });
 
